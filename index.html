@@ -1,0 +1,2307 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="90后老肥宅，毕业后一直从事Java开发，目前在学习机器学习相关内容，勤于学习，乐于分享。">
+<meta name="keywords" content="Java, Python, ML, DL, 程序猿, 肥宅">
+<meta property="og:type" content="website">
+<meta property="og:title" content="渣渣技术站">
+<meta property="og:url" content="http://liu246437.github.io/index.html">
+<meta property="og:site_name" content="渣渣技术站">
+<meta property="og:description" content="90后老肥宅，毕业后一直从事Java开发，目前在学习机器学习相关内容，勤于学习，乐于分享。">
+<meta property="og:locale" content="zh-Hans">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="渣渣技术站">
+<meta name="twitter:description" content="90后老肥宅，毕业后一直从事Java开发，目前在学习机器学习相关内容，勤于学习，乐于分享。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liu246437.github.io/">
+
+
+
+
+
+  <title>渣渣技术站</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">渣渣技术站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个技术渣的呐喊</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/06/leetcode0024-两两交换链表中的节点/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/06/leetcode0024-两两交换链表中的节点/" itemprop="url">leetcode0024-两两交换链表中的节点</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-06T11:58:50+08:00">
+                2019-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个链表，两两交换其中相邻的节点，并返回交换后的链表。</p>
+<p><strong>你不能只是单纯的改变节点内部的值</strong>，而是需要实际的进行节点交换。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">给定 1-&gt;2-&gt;3-&gt;4, 你应该返回 2-&gt;1-&gt;4-&gt;3.</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这个题其实是考察链表的基本操作，不应该算中等题。</p>
+<p>注意头结点的变换，注意保持前一节点的位置，注意判空就好了。</p>
+<p>类似于链表的题多在纸上画一画，一边都能得出答案。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function">struct ListNode* <span class="title">swapPairs</span><span class="params">(struct ListNode* head)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">res</span> = (<span class="title">struct</span> <span class="title">ListNode</span>*)<span class="title">malloc</span>(<span class="title">sizeof</span>(<span class="title">struct</span> <span class="title">ListNode</span>));</span></span><br><span class="line">    res-&gt;next = head;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">pre</span> = <span class="title">res</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">p</span> = <span class="title">head</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span>* <span class="title">q</span>;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">NULL</span> != p &amp;&amp; <span class="literal">NULL</span> != p-&gt;next)&#123;</span><br><span class="line">        q = p-&gt;next;</span><br><span class="line">        p-&gt;next = q-&gt;next;</span><br><span class="line">        pre-&gt;next = q;</span><br><span class="line">        q-&gt;next = p;</span><br><span class="line">        pre = p;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res-&gt;next;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/06/leetcode0011-盛水最多的容器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/06/leetcode0011-盛水最多的容器/" itemprop="url">leetcode0011-盛水最多的容器</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-06T11:51:29+08:00">
+                2019-08-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定 n 个非负整数 a1，a2，…，an，每个数代表坐标中的一个点 (i, ai) 。在坐标内画 n 条垂直线，垂直线 i 的两个端点分别为 (i, ai) 和 (i, 0)。找出其中的两条线，使得它们与 x 轴共同构成的容器可以容纳最多的水。</p>
+<p><strong>说明：</strong>你不能倾斜容器，且 n 的值至少为 2。</p>
+<p><img src="https://aliyun-lc-upload.oss-cn-hangzhou.aliyuncs.com/aliyun-lc-upload/uploads/2018/07/25/question_11.jpg" alt="img"></p>
+<p>图中垂直线代表输入数组 [1,8,6,2,5,4,8,3,7]。在此情况下，容器能够容纳水（表示为蓝色部分）的最大值为 49。</p>
+<p><strong>示例:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [1,8,6,2,5,4,8,3,7]</span><br><span class="line">输出: 49</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>有一种最简单的方法，双遍历暴力求解，这显然不应该使我们应该考虑使用方法，其时间复杂度是O(n²)</p>
+<p>能不能在一次遍历中就找到最大值呢，答案是可以的。</p>
+<p>首先我们确定，这个题其实是在求最大矩形面积。矩形的面积等于底乘以高。$ S = d * h $</p>
+<p>在底相同的情况下，影响矩形面积的是短边的高度，类似于木桶理论，一个木桶盛多少水，取决于短板的高度。</p>
+<p>初始时，我们给出最大底边长，计算该底边下的最大面积，然后我们移动短边到下一个位置，再计算当前情况下的最大面积，比较两个面积，取最大值，然后一直遍历下去，就可以得到最大面积。</p>
+<p>这里可能会有一点不明白，为什么移动短边，而不是移动长边？稍微想一下就可以回答这个问题。如果我们移动长边，短边不变，那我们取到的短边会越来越短，只有移动长边，才能保证取到较长的边。</p>
+<p>这里有一位大神给出了严格的<a href="https://blog.csdn.net/haoyutiangang/article/details/79874574" target="_blank" rel="noopener">证明过程</a>，大家可以参考一下。</p>
+<blockquote>
+<p><strong>证明</strong><br>假设：该算法并没有遍历到容量最大的情况</p>
+<ul>
+<li>我们令容量最大时的指针为p_left和p_right。根据题设，我们可以假设遍历时左指针先到达p_left，但是当左指针为p_left时，右指针还没有经过p_right左指针就移动了</li>
+<li>已知当左指针停留在p_left时，它只有在两种场景下会发生改变 <ul>
+<li>左指针和右指针在p_left相遇，则右指针一定在前往p_left的途中经过p_right，与题设矛盾</li>
+<li>右指针位于p_right右侧且当前的值大于左指针。则在这种情况下，此时容器的盛水量比题设中最大的盛水量还要大，与题设矛盾</li>
+</ul>
+</li>
+</ul>
+<p>因此该算法的遍历一定经过了最大的盛水量的情况</p>
+</blockquote>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>* height, <span class="keyword">int</span> heightSize)</span></span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span> <span class="keyword">const</span> *argv[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> height[] = &#123;<span class="number">1</span>,<span class="number">8</span>,<span class="number">6</span>,<span class="number">2</span>,<span class="number">5</span>,<span class="number">4</span>,<span class="number">8</span>,<span class="number">3</span>,<span class="number">7</span>&#125;;</span><br><span class="line">	<span class="keyword">int</span> heightSize = <span class="number">9</span>;</span><br><span class="line">	<span class="keyword">int</span> res = maxArea(height, heightSize);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"最多盛水: %d\n"</span>, res);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxArea</span><span class="params">(<span class="keyword">int</span>* height, <span class="keyword">int</span> heightSize)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> max = <span class="number">0</span>, tmp = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> left = <span class="number">0</span>, right = heightSize<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span> h = <span class="number">0</span>, d = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(left &lt; right)&#123;</span><br><span class="line">        </span><br><span class="line">        d = right-left;</span><br><span class="line">        </span><br><span class="line">      	<span class="comment">// 取短边为高，并且移动短边到下一位置</span></span><br><span class="line">        <span class="keyword">if</span>(height[left] &gt; height[right])&#123;</span><br><span class="line">            h = height[right];</span><br><span class="line">            right--;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            h = height[left];</span><br><span class="line">            left++;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        tmp = d * h;</span><br><span class="line">        <span class="keyword">if</span>(tmp &gt; max) max = tmp;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/05/机器学习实战2——K-近邻算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/05/机器学习实战2——K-近邻算法/" itemprop="url">机器学习实战2——K-近邻算法</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T20:28:39+08:00">
+                2019-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。</strong></p>
+<h2 id="K-近邻算法简述"><a href="#K-近邻算法简述" class="headerlink" title="K-近邻算法简述"></a>K-近邻算法简述</h2><p>K-近邻算法(kNN)简单而有效，采用测量不同特征值之间的距离来进行分类。</p>
+<ul>
+<li>优点：精度高、对异常值不敏感、无数据输入假定。</li>
+<li>缺点：计算复杂度高、空间复杂度高。</li>
+<li>适用数据范围：数值型和标称型</li>
+</ul>
+<h4 id="工作原理："><a href="#工作原理：" class="headerlink" title="工作原理："></a>工作原理：</h4><p>存在一个样本数据集合，也称作训练样本集，并且<strong>样本集中每个数据都存在标签</strong>，即我们知道样本集中每一数据与所属分类的对应关系。输入没有标签的新数据后，<strong>将新数据的每个特征与样本集中数据对应的特征进行比较</strong>，然后算法提取样本集中特征最相似数据(最近邻)的分类标签。一般来说，我们只选择样本集中前k个最相似的数据，这就是k-近邻算法中k的出处，通常k是不大于20的整数。最后，选择k个最相似数据中出出现次数最多的分类，作为新数据的分类。</p>
+<h4 id="距离的测量"><a href="#距离的测量" class="headerlink" title="距离的测量"></a>距离的测量</h4><p>K-近邻算法在分类过程中通过判断数据之间的<a href="https://baike.baidu.com/item/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E5%BA%A6%E9%87%8F/1274107?fromtitle=%E6%AC%A7%E6%B0%8F%E8%B7%9D%E7%A6%BB&fromid=1798948" target="_blank" rel="noopener">欧氏距离</a>来判定未知数据属于哪一个分类。</p>
+<p>简单介绍一下欧式距离。我们中学都学过两点距离公式：$ d=\sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2} $，$x,y$表示空间坐标</p>
+<p>这个公式我们还可以展开到三维空间：$d=\sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2}$</p>
+<p>同样的我们可以将该公式一直展开到n维空间，这就是欧氏距离的计算公式：d = $ \sqrt{\sum_{i=1}^{n}(x_i-y_i)^2} $</p>
+<h4 id="k-近邻算法的一般流程"><a href="#k-近邻算法的一般流程" class="headerlink" title="k-近邻算法的一般流程"></a>k-近邻算法的一般流程</h4><ol>
+<li>收集数据：可以使用任何方法</li>
+<li>准备数据：距离计算所需要的数值，最好是结构化的数据格式</li>
+<li>分析数据：分析使用任何方法</li>
+<li>训练算法：此步骤不适用于k-近邻算法</li>
+<li>测试算法：计算错误率</li>
+<li>使用算法：首先需要输入样本数据和机构化的输出结果，然后运行k-近邻算法判定输入数据分别属于哪个分类，最后应用对计算出的分类执行后序的处理。</li>
+</ol>
+<h2 id="实战演练"><a href="#实战演练" class="headerlink" title="实战演练"></a>实战演练</h2><p><strong>纸上得来终觉浅，绝知此事要躬行。</strong></p>
+<p>上面写了一堆理论性的东西，其实就是把《机器学习实战》这本书第二章讲的内容概括了一下。想要更好的了解这个算法，我们还是来看两个例子。</p>
+<h3 id="电影分类"><a href="#电影分类" class="headerlink" title="电影分类"></a>电影分类</h3><p>不知道大家是不是喜欢看电影，我还是比较喜欢看电影的，如果有空闲下来，去电影院看个电影是不错的选择。我一般喜欢喜剧片、科幻片和动作片。但是这里我还是老老实实套用书里讲的爱情片和动作片的分类好了。</p>
+<p>我们知道的功夫巨星如成龙，李连杰，吴京等，看他们的电影，你会发现其中打斗的场景特别多，生死看淡不服就干，但是一些爱情片如前任1，前任2，前任3(活了这么大也没个前任，甚是可悲)，这类电影吻戏会比较多。我们把吻戏的镜头和动作戏的镜头作为指标，衡量一部电影到底是爱情片还是动作片，爱情动作片不在考虑范围内，这个太为难我们的算法了(这个问题感兴趣的我们可以私下交流🙄🙄🙄)。</p>
+<h4 id="准备数据"><a href="#准备数据" class="headerlink" title="准备数据"></a>准备数据</h4><p>为了简化过程，这里我们只假定四条数据，两条爱情片，两条动作片。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">函数说明:创建数据集</span></span><br><span class="line"><span class="string">    @returns:</span></span><br><span class="line"><span class="string">        group: 数据集</span></span><br><span class="line"><span class="string">        labels: 分类标签</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">createDataSet</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">#四组二维特征</span></span><br><span class="line">  features = np.array([[<span class="number">1</span>,<span class="number">101</span>],[<span class="number">5</span>,<span class="number">89</span>],[<span class="number">108</span>,<span class="number">5</span>],[<span class="number">115</span>,<span class="number">8</span>]])</span><br><span class="line">  <span class="comment">#四组特征的标签</span></span><br><span class="line">  labels = [<span class="string">'爱情片'</span>,<span class="string">'爱情片'</span>,<span class="string">'动作片'</span>,<span class="string">'动作片'</span>]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> features, labels</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	features, labels = createDataSet()</span><br><span class="line">	print(<span class="string">"数据集："</span>)</span><br><span class="line">	print(features)</span><br><span class="line">	print(<span class="string">"标签："</span>)</span><br><span class="line">	print(labels)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+
+<p>下面运行结果，我使用的是sublime，配置了python开发环境，直接在sublime下执行的。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g5p19vyjl0j30k207c0t5.jpg" alt="image-20190805193729450"></p>
+<p>为了更直观的显示爱情片和动作片在空间上差异，我们使用matplotlib这个库，将上面的坐标画出来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">函数说明: 绘制坐标示意图</span></span><br><span class="line"><span class="string">	@params: </span></span><br><span class="line"><span class="string">		features: 特征值集合</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">drawPicture</span><span class="params">(features)</span>:</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># 导入matplotlib下的绘图工具</span></span><br><span class="line">	<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">	</span><br><span class="line">  <span class="comment"># 数据集中的第一维是x轴，数据集中的第二维是y轴</span></span><br><span class="line">	x, y = features[:, <span class="number">0</span>], features[:, <span class="number">1</span>]</span><br><span class="line">	<span class="comment"># 初始化</span></span><br><span class="line">	fig, ax = plt.subplots()</span><br><span class="line">	<span class="comment"># 设置数据: 爱情片用红色表示，动作片用蓝色表示</span></span><br><span class="line">	ax.scatter(x[:<span class="number">2</span>], y[:<span class="number">2</span>], color=<span class="string">'red'</span>)</span><br><span class="line">  ax.scatter(x[<span class="number">2</span>:], y[<span class="number">2</span>:], color=<span class="string">'blue'</span>)</span><br><span class="line"></span><br><span class="line">	plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>如下图所示:</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79ly1g5p1xob788j30us0mqjs0.jpg" alt="image-20190805200021091"></p>
+<p>即使不使用算法，从感官上看，未知点靠进红色点时，应该被标记为红色，即爱情片；未知点靠进蓝色点时，应该被标记为蓝色，即动作片。</p>
+<h4 id="k-近邻算法实现"><a href="#k-近邻算法实现" class="headerlink" title="k-近邻算法实现"></a>k-近邻算法实现</h4><p>带有标签的数据集我们已经准备好了，接下来是实现算法。对新给入的数据将其依次与已知数据距离计算，得到新数据距离已有数据的距离。然后从这些距离中找出最小的k个，统计这k个数的分类情况，最多的类作为新数据的分类。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">函数说明: kNN算法，分类器</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">	@params:</span></span><br><span class="line"><span class="string">    	inX: 用于分类的数据(测试集)</span></span><br><span class="line"><span class="string">    	dataSet: 用于训练的数据(训练集)</span></span><br><span class="line"><span class="string">    	labes: 分类标签</span></span><br><span class="line"><span class="string">    	k: kNN算法参数,选择距离最小的k个点</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">	@returns:</span></span><br><span class="line"><span class="string">    	sortedClassCount[0][0]: 分类结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify0</span><span class="params">(inX, dataSet, labels, k)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 训练集有多少条数据</span></span><br><span class="line">    dataSetSize = dataSet.shape[<span class="number">0</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 将inX在横向复制1次，纵向复制dataSetSize次</span></span><br><span class="line">    <span class="comment"># 这样就得到了一个和训练集形状相同的测试数据集</span></span><br><span class="line">    dataMat = np.tile(inX, (dataSetSize, <span class="number">1</span>))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 矩阵之间做减法，求特征值之间的差值</span></span><br><span class="line">    diffMat = dataMat - dataSet</span><br><span class="line">    <span class="comment"># 差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 累加得到距离的平方</span></span><br><span class="line">    sqDistances = sqDiffMat.sum(axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方，计算出距离</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 返回distances中元素从小到大排序后的索引值</span></span><br><span class="line">    sortedDistIndices = distances.argsort()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 定一个记录类别次数的字典</span></span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 取出前k个元素的类别</span></span><br><span class="line">        voteIlabel = labels[sortedDistIndices[i]]</span><br><span class="line">        <span class="comment"># dict.get(key,default=None),字典的get()方法,返回指定键的值,如果值不在字典中返回默认值。</span></span><br><span class="line">        <span class="comment"># 计算类别次数</span></span><br><span class="line">        classCount[voteIlabel] = classCount.get(voteIlabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># python3中用items()替换python2中的iteritems()</span></span><br><span class="line">    <span class="comment"># key=operator.itemgetter(1)根据字典的值进行排序</span></span><br><span class="line">    <span class="comment"># key=operator.itemgetter(0)根据字典的键进行排序</span></span><br><span class="line">    <span class="comment"># reverse降序排序字典</span></span><br><span class="line">    sortedClassCount = sorted(classCount.items(),key=operator.itemgetter(<span class="number">1</span>),reverse=<span class="literal">True</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 返回次数最多的类别,即所要分类的类别</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount[<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>下面我们就测试这个算法，看看它能不能像我们想的那样，给未知的电影进行分类。</p>
+<p>我们使用<code>inX = [10, 107]</code>作为测试数据，这不电影里面吻戏居多，应该是一部爱情片。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g5p2j8yq6rj311k0oqtce.jpg" alt="image-20190805202105125"></p>
+<p>从上面的执行结果我们可以看出，分类器很好的完成了自己的工作。对于吻戏居多的电影分为爱情片。</p>
+<p>我们可以多测试数据：</p>
+<blockquote>
+<p>测试数据:  [107, 10] 的分类结果是:  动作片</p>
+<p>测试数据:  [50, 50] 的分类结果是:  爱情片</p>
+<p>测试数据:  [100, 100] 的分类结果是:  动作片</p>
+</blockquote>
+<p>从上面的例子我们可以看出，这个分类器是无法分出爱情动作片的。</p>
+<h3 id="k-近邻算法实战之约会网站配对效果判定"><a href="#k-近邻算法实战之约会网站配对效果判定" class="headerlink" title="k-近邻算法实战之约会网站配对效果判定"></a>k-近邻算法实战之约会网站配对效果判定</h3><p>待更新</p>
+<h3 id="附《机器学习实战》电子版"><a href="#附《机器学习实战》电子版" class="headerlink" title="附《机器学习实战》电子版"></a>附《机器学习实战》电子版</h3><p><a href="https://item.jd.com/11242112.html" target="_blank" rel="noopener">《机器学习实战》</a>链接:<a href="https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg" target="_blank" rel="noopener">https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg</a>  密码:s6h8</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/05/leetcode0169-求众数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/05/leetcode0169-求众数/" itemprop="url">leetcode0169-求众数</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T14:28:05+08:00">
+                2019-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个大小为 n 的数组，找到其中的众数。众数是指在数组中出现次数大于<code>⌊ n/2 ⌋</code> 的元素。</p>
+<p>你可以假设数组是非空的，并且给定的数组总是存在众数。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [3,2,3]</span><br><span class="line">输出: 3</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: [2,2,1,1,1,2,2]</span><br><span class="line">输出: 2</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这个题的技法有很多，最简单的一种就是遍历数组，统计每个元素出现的次数，返回统计次数最多的元素，想法最简单，但是性能并不好，时间复杂度和空间复杂度都很高。稍微想一下，看一下题目中的条件，众数是指在数组中出现次数超过[n/2]的元素，如果我们将数组排序，中间的元素必然是众数，这样就把时间复杂度降到了O(n·logn)，空间复杂度为O(1)。</p>
+<p>其实还有一种更好的解决方案：<a href="https://blog.csdn.net/qq_17550379/article/details/83818965" target="_blank" rel="noopener">摩尔投票法</a></p>
+<p>该算法的时间复杂度是O(n)，空间复杂度是O(1)，是已知最后的解决方案。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">majorityElement</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">int</span> res = <span class="number">0</span>, tmp = <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize; i++)&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(tmp == <span class="number">0</span>)&#123;</span><br><span class="line">            </span><br><span class="line">            res = *(nums+i);</span><br><span class="line">            tmp = <span class="number">1</span>;</span><br><span class="line">        &#125;<span class="keyword">else</span> <span class="keyword">if</span>(res == *(nums+i))&#123;</span><br><span class="line">            tmp++;</span><br><span class="line">        &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">            tmp--;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> res;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/04/leetcode0160-相交链表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/04/leetcode0160-相交链表/" itemprop="url">leetcode0160-相交链表</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-04T19:58:28+08:00">
+                2019-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>编写一个程序，找到两个单链表相交的起始节点。</p>
+<p>如下面的两个链表<strong>：</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_statement.png" alt="img"></p>
+<p>在节点 c1 开始相交。</p>
+<p><strong>示例 1：</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_example_1.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：intersectVal = 8, listA = [4,1,8,4,5], listB = [5,0,1,8,4,5], skipA = 2, skipB = 3</span><br><span class="line">输出：Reference of the node with value = 8</span><br><span class="line">输入解释：相交节点的值为 8 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [4,1,8,4,5]，链表 B 为 [5,0,1,8,4,5]。在 A 中，相交节点前有 2 个节点；在 B 中，相交节点前有 3 个节点。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_example_2.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：intersectVal = 2, listA = [0,9,1,2,4], listB = [3,2,4], skipA = 3, skipB = 1</span><br><span class="line">输出：Reference of the node with value = 2</span><br><span class="line">输入解释：相交节点的值为 2 （注意，如果两个列表相交则不能为 0）。从各自的表头开始算起，链表 A 为 [0,9,1,2,4]，链表 B 为 [3,2,4]。在 A 中，相交节点前有 3 个节点；在 B 中，相交节点前有 1 个节点。</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/14/160_example_3.png" alt="img"></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">输入：intersectVal = 0, listA = [2,6,4], listB = [1,5], skipA = 3, skipB = 2</span><br><span class="line">输出：null</span><br><span class="line">输入解释：从各自的表头开始算起，链表 A 为 [2,6,4]，链表 B 为 [1,5]。由于这两个链表不相交，所以 intersectVal 必须为 0，而 skipA 和 skipB 可以是任意值。</span><br><span class="line">解释：这两个链表不相交，因此返回 null。</span><br></pre></td></tr></table></figure>
+
+<p><strong>注意：</strong></p>
+<ul>
+<li>如果两个链表没有交点，返回 null.</li>
+<li>在返回结果后，两个链表仍须保持原有的结构。</li>
+<li>可假定整个链表结构中没有循环。</li>
+<li>程序尽量满足 O(n) 时间复杂度，且仅用 O(1) 内存。</li>
+</ul>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这个题最大的障碍在于两个链表不等长，如果等长，我们只许挨个比较指针地址就可以了，第一个相等的就是交点。所以思路有很多种。</p>
+<h4 id="方法1"><a href="#方法1" class="headerlink" title="方法1"></a>方法1</h4><ul>
+<li>遍历链表a和链表b，求出他们的长度差m</li>
+<li>再次遍历，这次遍历时先让长链多走m，然后再同时开始，第一个相等的就是交点</li>
+</ul>
+<h4 id="方法2"><a href="#方法2" class="headerlink" title="方法2"></a>方法2</h4><p>我们都学过加法交换律，a+b = b+a</p>
+<p>所以A链长+B链长等于B链长+A链长</p>
+<ul>
+<li>同时遍历A和B连个链表</li>
+<li>当代理指针a为空时指向B链</li>
+<li>当代理指针b为空时指向A链</li>
+<li>这样A+B和B+A最后一部分肯定是相等的，第一个相等的节点就是交点</li>
+</ul>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 这里我们只实现了方法2的代码</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function">struct ListNode *<span class="title">getIntersectionNode</span><span class="params">(struct ListNode *headA, struct ListNode *headB)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">a</span> = <span class="title">headA</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> *<span class="title">b</span> = <span class="title">headB</span>;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(a != b)&#123;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(<span class="literal">NULL</span> != a)</span><br><span class="line">            a = a-&gt;next;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            a = headB;</span><br><span class="line">        <span class="keyword">if</span>(<span class="literal">NULL</span> != b)</span><br><span class="line">            b = b-&gt;next;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            b = headA;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> a;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/04/leetcode0142-环形链表II/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/04/leetcode0142-环形链表II/" itemprop="url">leetcode0142-环形链表II</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-04T19:10:41+08:00">
+                2019-08-04
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个链表，返回链表开始入环的第一个节点。 如果链表无环，则返回<code>null</code>。</p>
+<p>为了表示给定链表中的环，我们使用整数 <code>pos</code>来表示链表尾连接到链表中的位置（索引从 0 开始）。 如果<code>pos</code>是 -1，则在该链表中没有环。</p>
+<p><strong>说明：</strong>不允许修改给定的链表。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [3,2,0,-4], pos = 1</span><br><span class="line">输出：tail connects to node index 1</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt="img"></p>
+<p><strong>示例2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2], pos = 0</span><br><span class="line">输出：tail connects to node index 0</span><br><span class="line">解释：链表中有一个环，其尾部连接到第一个节点。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt="img"></p>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1], pos = -1</span><br><span class="line">输出：no cycle</span><br><span class="line">解释：链表中没有环。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt="img"></p>
+<p><strong>进阶：</strong>你是否可以不用额外空间解决此题？</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>参考了知乎的一篇文章——<a href="https://zhuanlan.zhihu.com/p/44208566" target="_blank" rel="noopener">【LeetCode】142#环形链表2</a></p>
+<p>思路一定还是快慢指针。只是如何找到其中的关系，确认入环的节点是哪一个。</p>
+<p>首先我们假设链表中有环存在，这只一个快指针<code>fast</code>和慢指针<code>slow</code>，这两个指针在最开始都指向初始位置<code>head</code>，<code>slow</code>的速度是1，<code>fast</code>的速度是2，<code>fast</code>的速度是<code>slow</code>的两倍，在相同的时间下，<code>fast</code>的移动距离是<code>slow</code>的两倍。</p>
+<p><img src="https://img-blog.csdn.net/20180524101941403?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzI2NDEwMTAx/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="img"></p>
+<p>如图所示：</p>
+<ul>
+<li>A为起点，B是入环点，C是相遇点</li>
+<li>x是到入环的距离，y+z是一圈的距离</li>
+<li>第一次在C点相遇时，<code>slow</code>走了<code>x+y</code>，<code>fast</code>走了<code>x+y+z+y</code></li>
+<li>快指针是慢指针距离的两倍，所以有2(x+y) = x+y+z+y</li>
+<li>解上面的等式有x=z</li>
+<li>所以当快慢指针在C点相遇后，由于x=z，如果我们把其中一个指针放在A，另一个还在C，此时以相同的速度前进，他们就会在B点相遇，而B点就是我们要求的入环点</li>
+</ul>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function">struct ListNode *<span class="title">detectCycle</span><span class="params">(struct ListNode *head)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span> == head || <span class="literal">NULL</span> == head-&gt;next) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> * <span class="title">slow</span> = <span class="title">head</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> * <span class="title">fast</span> = <span class="title">head</span>;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">NULL</span> != fast-&gt;next &amp;&amp; <span class="literal">NULL</span> != fast-&gt;next-&gt;next)&#123;</span><br><span class="line">        </span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(slow == fast) &#123;</span><br><span class="line">            </span><br><span class="line">            slow = head;</span><br><span class="line">            <span class="keyword">while</span>(slow != fast)&#123;</span><br><span class="line">                </span><br><span class="line">                slow = slow-&gt;next;</span><br><span class="line">                fast = fast-&gt;next;</span><br><span class="line">            &#125;</span><br><span class="line">            </span><br><span class="line">            <span class="keyword">return</span> slow;</span><br><span class="line">        &#125;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/03/机器学习实战1——机器学习基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/03/机器学习实战1——机器学习基础/" itemprop="url">机器学习实战1——机器学习基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-03T22:40:10+08:00">
+                2019-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>​        重新学习《机器学习实战》这本书，作为机器学习入门来说，这本书真的很不错，理论和实际相结合，可以快速上手代码，体验算法的实现过程。目标是把这本书的每一章概要都摘录出来，算是自己的学习笔记吧。文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。</p>
+<h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>机器学习能让我们<strong>自数据集中受到启发</strong>，换句话说，我们会<strong>利用计算机来彰显数据背后的真实含义</strong>，这才是机器学习的正式含义。</p>
+<p>应用场景举例：</p>
+<ul>
+<li>改善商业决策</li>
+<li>提高生成率</li>
+<li>检测疾病</li>
+<li>预测天气</li>
+<li>人脸识别</li>
+<li>垃圾邮件分类</li>
+<li>个性化商品推荐</li>
+</ul>
+<h2 id="何谓机器学习"><a href="#何谓机器学习" class="headerlink" title="何谓机器学习"></a>何谓机器学习</h2><p><strong><em>机器学习就是把无序的数据转换成有用的信息。</em></strong></p>
+<p>机器学习对于任何需要解释并操作数据的领域都有所裨益。</p>
+<p>机器学习用到了统计学的知识。</p>
+<p>当我们不能建立一种精确模型时，我们可以参照现实世界中存在的这种实例，运用统计学工具去解决这类问题。</p>
+<h3 id="传感器和海量数据"><a href="#传感器和海量数据" class="headerlink" title="传感器和海量数据"></a>传感器和海量数据</h3><p>非人为数据：传感器采集的数据</p>
+<p>移动计算和传感器产生的海量数据意味着未来我们将面临着越来越多的数据，如何从海量数据中抽取到有价值的信息将是一个非常重要的可以。</p>
+<h3 id="机器学习非常重要"><a href="#机器学习非常重要" class="headerlink" title="机器学习非常重要"></a>机器学习非常重要</h3><p>针对具体任务搞懂所有相关数据的意义所在，这正成为基本的技能要求。</p>
+<p>机器学习有助于我们穿越数据的迷雾，从中抽取到有用的信息。</p>
+<h2 id="关键术语"><a href="#关键术语" class="headerlink" title="关键术语"></a>关键术语</h2><p><strong>特征：</strong>也称为属性，特征值可以是数值型，二值型（是或不是一类只有两个值，一般取0，1），枚举型等。特征或者属性通常是训练样本集的列，它们是独立测量得到的结果。多个特征联系在一起共同组成一个训练样本。</p>
+<p><strong>目标变量：</strong>机器学习算法的预测结果，在分类算法中目标变量的类型通常是标称型的，在回归算法中通常是连续型的。</p>
+<p><strong>训练集：</strong>已经处理过的数据，根据任务的不同，数据的处理方式也不尽相同。训练集必须有明确的目标变量的值，以便机器学习算法可以发现特征和目标变量之间的关系。</p>
+<p><strong>训练样本：</strong>训练集中的单条记录</p>
+<p><strong>训练数据：</strong>通过训练数据作为算法输入训练模型</p>
+<p><strong>测试数据：</strong>训练结束后输入测试数据，验证训练结果。输入测试数据时并不输入测试样本的目标变量，而是有程序自身去判定。</p>
+<p><strong>知识表示：</strong>某些算法可以产生很容易理解的知识表示，某些算法的知识表示也许只有计算机可以理解。知识表示可以采用规则集的形式，也可以采用概率分布的形式，甚至可以是训练样本集中的一个实例。</p>
+<p><strong>监督学习：</strong>必须知道分类结果或者预测结果是什么，即目标标量的分类信息。</p>
+<p><strong>无监督学习：</strong>数据没有类别信息，也不会给定目标值。</p>
+<h2 id="机器学习的主要任务"><a href="#机器学习的主要任务" class="headerlink" title="机器学习的主要任务"></a>机器学习的主要任务</h2><p>机器学习的主要任务是分类和回归。</p>
+<p>回归主要用于预测数值型数据。</p>
+<p>分类和回归都属于监督学习。</p>
+<p>无监督学习的主要任务是聚类和密度估计。无监督学习还可以减少数据特征的维度，以便我们可以使用二维或三维图形更加直观的展示数据。</p>
+<p><strong>聚类：</strong>将数据集合分成由类似的对象组成的多个类的过程被称为聚类</p>
+<p><strong>密度估计：</strong>将寻找描述数据统计值的过程称之为密度估计。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79ly1g5mrbypuddj30yh0bbtb5.jpg" alt="image-20190803202219625"></p>
+<h2 id="如何选择合适的算法"><a href="#如何选择合适的算法" class="headerlink" title="如何选择合适的算法"></a>如何选择合适的算法</h2><p><strong>选择哪种算法取决于以下两个问题：</strong></p>
+<ul>
+<li>使用机器学习算法的目的，想要算法完成何种任务。<ul>
+<li><strong>预测目标变量的值选择监督学习算法，否则选择无监督学习算法。</strong><ul>
+<li>在监督学习算法中，如果目标变量是离散型，可以选择分类算法，如果目标值是连续型的数值，需要选择回归算法。</li>
+<li>再无监督学习中，分析是否需要将数据划分为离散的组，如果是，则选择聚类算法。如果还需要估计数据与每个分组的相似程度，则需要使用密度估计算法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>需要分析或者收集的数据是什么<ul>
+<li>了解数据的特性<ul>
+<li>特征值是离散型变量还是连续型变量</li>
+<li>特征值中是否存在缺失的值，何种原因造成缺失</li>
+<li>数据中是否存在异常值</li>
+<li>某个特征发生的频率如何</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="开发及其学习应用程序的步骤"><a href="#开发及其学习应用程序的步骤" class="headerlink" title="开发及其学习应用程序的步骤"></a>开发及其学习应用程序的步骤</h2><ol>
+<li><p>收集数据</p>
+<ul>
+<li>网络爬虫</li>
+<li>设备反馈，各类传感器</li>
+<li>公开的数据源</li>
+</ul>
+</li>
+<li><p>准备输入数据</p>
+<p>得到数据之后，还必须保证数据格式符合要求。需要为机器学习算法准备特定的数据格式，如某些特征值使用特定的格式，一些算法要求目标变量和特征值是字符串类型，而另一些算法可能要求是整数类型。</p>
+</li>
+<li><p>分析输入数据</p>
+<p>此步骤主要是人工分析以前得到的数据。这一步的主要作用是确保数据集中没有垃圾数据。</p>
+</li>
+<li><p>训练算法</p>
+<p>第4步和第5步是机器学习算法的核心。我们将前两步得到的格式化数据输入到算法，从中提取知识或信息。这里得到的知识需要存储为计算机可以处理的格式。</p>
+<p>在无监督学习中，由于不存在目标变量之，故而也不需要训练算法，所有与算法相关的内容都集中在第5步。</p>
+</li>
+<li><p>测试算法</p>
+<p>这一步将实际使用步骤4得到的知识信息。为了评估算法，必须测试算法工作的效果。对于监督学习，必须已知用于评估算法的目标变量值；对于无监督学习，也必须使用其他评测手段来检验算法的成功率。</p>
+</li>
+<li><p>使用算法</p>
+<p>将机器学习的算法转换为应用程序，执行实际任务。</p>
+</li>
+</ol>
+<h2 id="Python语言的优势"><a href="#Python语言的优势" class="headerlink" title="Python语言的优势"></a>Python语言的优势</h2><p>基于以下三个原因：</p>
+<ul>
+<li>python语法清晰</li>
+<li>易于操作纯文本文件</li>
+<li>使用广泛，存在大量的开发文档</li>
+</ul>
+<h3 id="可执行伪代码"><a href="#可执行伪代码" class="headerlink" title="可执行伪代码"></a>可执行伪代码</h3><h3 id="Python比较流行"><a href="#Python比较流行" class="headerlink" title="Python比较流行"></a>Python比较流行</h3><ul>
+<li>SciPy</li>
+<li>NumPy</li>
+<li>Matplotlib</li>
+</ul>
+<h3 id="Python语言的特色"><a href="#Python语言的特色" class="headerlink" title="Python语言的特色"></a>Python语言的特色</h3><h3 id="Python语言的缺点"><a href="#Python语言的缺点" class="headerlink" title="Python语言的缺点"></a>Python语言的缺点</h3><p>性能不足，执行效率没有C或者Java快。 </p>
+<h3 id="附《机器学习实战》电子版"><a href="#附《机器学习实战》电子版" class="headerlink" title="附《机器学习实战》电子版"></a>附《机器学习实战》电子版</h3><p><a href="https://item.jd.com/11242112.html" target="_blank" rel="noopener">《机器学习实战》</a>链接:<a href="https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg" target="_blank" rel="noopener">https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg</a>  密码:s6h8</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/03/leetcode0141-环形链表/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/03/leetcode0141-环形链表/" itemprop="url">leetcode0141-环形链表</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-03T19:24:44+08:00">
+                2019-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个链表，判断链表中是否有环。</p>
+<p>为了表示给定链表中的环，我们使用整数 <code>pos</code> 来表示链表尾连接到链表中的位置（索引从<code>0</code> 开始）。 如果 <code>pos</code> 是 <code>-1</code>，则在该链表中没有环。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [3,2,0,-4], pos = 1</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第二个节点。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist.png" alt="img"></p>
+<p><strong>示例2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1,2], pos = 0</span><br><span class="line">输出：true</span><br><span class="line">解释：链表中有一个环，其尾部连接到第一个节点。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test2.png" alt="img"></p>
+<p><strong>示例 3：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：head = [1], pos = -1</span><br><span class="line">输出：false</span><br><span class="line">解释：链表中没有环。</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://assets.leetcode-cn.com/aliyun-lc-upload/uploads/2018/12/07/circularlinkedlist_test3.png" alt="img"></p>
+<p><strong>进阶：</strong></p>
+<p>你能用 <em>O(1)</em>（即，常量）内存解决此问题吗？</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>刚开始读这个题的时候读了半天没读懂，最后明白了，和<code>pos</code>就没有关系，输入中没有<code>pos</code>，就是判断链表是不是环形链表。</p>
+<p>首先明确什么是<a href="https://baike.baidu.com/item/%E5%BE%AA%E7%8E%AF%E9%93%BE%E8%A1%A8/3228465?fr=aladdin" target="_blank" rel="noopener">环形链表</a>，连接给出的是循环链表的定义，环形链表就是尾指针不一定要指向头结点，可以指向其他结点。只要为指针指向了链表中的一个节点就构成了环形链表。</p>
+<p>如何判断有环呢？一般学校都会有操场，中间都会有一个400米的跑道。想象一下有两个人在起点开始赛跑，假定两个人体力无限，就一直跑下去，跑得快的人一定会追上跑的慢的人，因为跑的快的比跑的慢的多跑了一圈。</p>
+<p>参考赛跑，我们给出两个指针：</p>
+<ul>
+<li>慢指针：一个每次向后移动一步</li>
+<li>快指针：一个每次向后移动两步</li>
+</ul>
+<p>如果两个指针能够相遇，说明链表中存在环。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Definition for singly-linked list.</span></span><br><span class="line"><span class="comment"> * struct ListNode &#123;</span></span><br><span class="line"><span class="comment"> *     int val;</span></span><br><span class="line"><span class="comment"> *     struct ListNode *next;</span></span><br><span class="line"><span class="comment"> * &#125;;</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">hasCycle</span><span class="params">(struct ListNode *head)</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(<span class="literal">NULL</span> == head || <span class="literal">NULL</span> == head-&gt;next) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> * <span class="title">slow</span> = <span class="title">head</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">ListNode</span> * <span class="title">fast</span> = <span class="title">head</span>;</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">while</span>(<span class="literal">NULL</span> != fast-&gt;next &amp;&amp; <span class="literal">NULL</span> != fast-&gt;next-&gt;next)&#123;</span><br><span class="line">        </span><br><span class="line">        slow = slow-&gt;next;</span><br><span class="line">        fast = fast-&gt;next-&gt;next;</span><br><span class="line">        <span class="keyword">if</span>(slow-&gt;val == fast-&gt;val) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/03/leetcode0119-杨辉三角II/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/03/leetcode0119-杨辉三角II/" itemprop="url">leetcode0119-杨辉三角II</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-03T18:50:20+08:00">
+                2019-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定一个非负索引 <em>k</em>，其中 <em>k</em> ≤ 33，返回杨辉三角的第 <em>k</em> 行。</p>
+<p><img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/PascalTriangleAnimated2.gif" alt="img"></p>
+<p>在杨辉三角中，每个数是它左上方和右上方的数的和。</p>
+<p><strong>示例：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: 3</span><br><span class="line">输出: [1,3,3,1]</span><br></pre></td></tr></table></figure>
+
+<p><strong>进阶：</strong></p>
+<p>你可以优化你的算法到 <em>O</em>(<em>k</em>) 空间复杂度吗？</p>
+<h3 id="解题思路"><a href="#解题思路" class="headerlink" title="解题思路"></a>解题思路</h3><p>这个题和杨辉三角没有太大的区别，空间复杂为O(k)无非是要求大家本地操作。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">getRow</span><span class="params">(self, rowIndex: int)</span> -&gt; List[int]:</span></span><br><span class="line">        </span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(rowIndex+<span class="number">1</span>):</span><br><span class="line">            res.insert(<span class="number">0</span>, <span class="number">1</span>)</span><br><span class="line">            <span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">1</span>, i):</span><br><span class="line">                res[j] = res[j] + res[j+<span class="number">1</span>]</span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/03/leetcode0349-两个数组的交集/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/08/03/leetcode0349-两个数组的交集/" itemprop="url">leetcode0349-两个数组的交集</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-03T18:13:37+08:00">
+                2019-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/算法/" itemprop="url" rel="index">
+                    <span itemprop="name">算法</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h3 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h3><p>给定两个数组，编写一个函数来计算它们的交集。</p>
+<p><strong>示例 1:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums1 = [1,2,2,1], nums2 = [2,2]</span><br><span class="line">输出: [2]</span><br></pre></td></tr></table></figure>
+
+<p><strong>示例 2:</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入: nums1 = [4,9,5], nums2 = [9,4,9,8,4]</span><br><span class="line">输出: [9,4]</span><br></pre></td></tr></table></figure>
+
+<p><strong>说明:</strong></p>
+<ul>
+<li>输出结果中的每个元素一定是唯一的。</li>
+<li>我们可以不考虑输出结果的顺序。</li>
+</ul>
+<h3 id="解题思路1"><a href="#解题思路1" class="headerlink" title="解题思路1"></a>解题思路1</h3><p>遍历数组1，看数组1中的元素是否在数组2中，如果不在，判断该元素是否在返回结果中，不在，则添加到返回结果中。</p>
+<h3 id="代码实现1"><a href="#代码实现1" class="headerlink" title="代码实现1"></a>代码实现1</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">intersection</span><span class="params">(self, nums1: List[int], nums2: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        </span><br><span class="line">        res = []</span><br><span class="line">        <span class="keyword">for</span> a <span class="keyword">in</span> nums1:</span><br><span class="line">            <span class="keyword">if</span> a <span class="keyword">in</span> nums2 <span class="keyword">and</span> a <span class="keyword">not</span> <span class="keyword">in</span> res: res.append(a)</span><br><span class="line">                </span><br><span class="line">        <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
+
+<h3 id="解题思路2"><a href="#解题思路2" class="headerlink" title="解题思路2"></a>解题思路2</h3><p>python3运行第一的代码，使用了set去重，然后两个集合取交集。</p>
+<h3 id="代码实现2"><a href="#代码实现2" class="headerlink" title="代码实现2"></a>代码实现2</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span>:</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">intersection</span><span class="params">(self, nums1: List[int], nums2: List[int])</span> -&gt; List[int]:</span></span><br><span class="line">        <span class="keyword">return</span> list(set(nums1)&amp;set(nums2))</span><br></pre></td></tr></table></figure>
+
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/avatar.jpg" alt="liu246437">
+            
+              <p class="site-author-name" itemprop="name">liu246437</p>
+              <p class="site-description motion-element" itemprop="description">90后老肥宅，毕业后一直从事Java开发，目前在学习机器学习相关内容，勤于学习，乐于分享。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liu246437</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="k-近邻算法,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。 K-近邻算法简述K-近邻算法(kNN)简单而有效，采用测量不同特征值之间的距离来进行分类。  优点：精度高、对异常值不敏感、无数据输入假定。 缺点：计算复杂度高、空间复杂度高。 适用数据范围：数值型和标称型  工作原理：存在一个样本数据集合，也称作训练样本集，并且样本集中每个数据都存在标签，即">
+<meta name="keywords" content="k-近邻算法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习实战2——K-近邻算法">
+<meta property="og:url" content="http://liu246437.github.io/2019/08/05/机器学习实战2——K-近邻算法/index.html">
+<meta property="og:site_name" content="渣渣技术站">
+<meta property="og:description" content="文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。 K-近邻算法简述K-近邻算法(kNN)简单而有效，采用测量不同特征值之间的距离来进行分类。  优点：精度高、对异常值不敏感、无数据输入假定。 缺点：计算复杂度高、空间复杂度高。 适用数据范围：数值型和标称型  工作原理：存在一个样本数据集合，也称作训练样本集，并且样本集中每个数据都存在标签，即">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79ly1g5p19vyjl0j30k207c0t5.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g5p1xob788j30us0mqjs0.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/006tNc79ly1g5p2j8yq6rj311k0oqtce.jpg">
+<meta property="og:updated_time" content="2019-08-06T09:11:01.804Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习实战2——K-近邻算法">
+<meta name="twitter:description" content="文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。 K-近邻算法简述K-近邻算法(kNN)简单而有效，采用测量不同特征值之间的距离来进行分类。  优点：精度高、对异常值不敏感、无数据输入假定。 缺点：计算复杂度高、空间复杂度高。 适用数据范围：数值型和标称型  工作原理：存在一个样本数据集合，也称作训练样本集，并且样本集中每个数据都存在标签，即">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/006tNc79ly1g5p19vyjl0j30k207c0t5.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liu246437.github.io/2019/08/05/机器学习实战2——K-近邻算法/">
+
+
+
+
+
+  <title>机器学习实战2——K-近邻算法 | 渣渣技术站</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">渣渣技术站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个技术渣的呐喊</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/05/机器学习实战2——K-近邻算法/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">机器学习实战2——K-近邻算法</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-05T20:28:39+08:00">
+                2019-08-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><strong>文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。</strong></p>
+<h2 id="K-近邻算法简述"><a href="#K-近邻算法简述" class="headerlink" title="K-近邻算法简述"></a>K-近邻算法简述</h2><p>K-近邻算法(kNN)简单而有效，采用测量不同特征值之间的距离来进行分类。</p>
+<ul>
+<li>优点：精度高、对异常值不敏感、无数据输入假定。</li>
+<li>缺点：计算复杂度高、空间复杂度高。</li>
+<li>适用数据范围：数值型和标称型</li>
+</ul>
+<h4 id="工作原理："><a href="#工作原理：" class="headerlink" title="工作原理："></a>工作原理：</h4><p>存在一个样本数据集合，也称作训练样本集，并且<strong>样本集中每个数据都存在标签</strong>，即我们知道样本集中每一数据与所属分类的对应关系。输入没有标签的新数据后，<strong>将新数据的每个特征与样本集中数据对应的特征进行比较</strong>，然后算法提取样本集中特征最相似数据(最近邻)的分类标签。一般来说，我们只选择样本集中前k个最相似的数据，这就是k-近邻算法中k的出处，通常k是不大于20的整数。最后，选择k个最相似数据中出出现次数最多的分类，作为新数据的分类。</p>
+<h4 id="距离的测量"><a href="#距离的测量" class="headerlink" title="距离的测量"></a>距离的测量</h4><p>K-近邻算法在分类过程中通过判断数据之间的<a href="https://baike.baidu.com/item/%E6%AC%A7%E5%87%A0%E9%87%8C%E5%BE%97%E5%BA%A6%E9%87%8F/1274107?fromtitle=%E6%AC%A7%E6%B0%8F%E8%B7%9D%E7%A6%BB&fromid=1798948" target="_blank" rel="noopener">欧氏距离</a>来判定未知数据属于哪一个分类。</p>
+<p>简单介绍一下欧式距离。我们中学都学过两点距离公式：$ d=\sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2} $，$x,y$表示空间坐标</p>
+<p>这个公式我们还可以展开到三维空间：$d=\sqrt{(x_1 - x_2)^2+(y_1 - y_2)^2+(z_1 - z_2)^2}$</p>
+<p>同样的我们可以将该公式一直展开到n维空间，这就是欧氏距离的计算公式：d = $ \sqrt{\sum_{i=1}^{n}(x_i-y_i)^2} $</p>
+<h4 id="k-近邻算法的一般流程"><a href="#k-近邻算法的一般流程" class="headerlink" title="k-近邻算法的一般流程"></a>k-近邻算法的一般流程</h4><ol>
+<li>收集数据：可以使用任何方法</li>
+<li>准备数据：距离计算所需要的数值，最好是结构化的数据格式</li>
+<li>分析数据：分析使用任何方法</li>
+<li>训练算法：此步骤不适用于k-近邻算法</li>
+<li>测试算法：计算错误率</li>
+<li>使用算法：首先需要输入样本数据和机构化的输出结果，然后运行k-近邻算法判定输入数据分别属于哪个分类，最后应用对计算出的分类执行后序的处理。</li>
+</ol>
+<h2 id="实战演练"><a href="#实战演练" class="headerlink" title="实战演练"></a>实战演练</h2><p><strong>纸上得来终觉浅，绝知此事要躬行。</strong></p>
+<p>上面写了一堆理论性的东西，其实就是把《机器学习实战》这本书第二章讲的内容概括了一下。想要更好的了解这个算法，我们还是来看两个例子。</p>
+<h3 id="电影分类"><a href="#电影分类" class="headerlink" title="电影分类"></a>电影分类</h3><p>不知道大家是不是喜欢看电影，我还是比较喜欢看电影的，如果有空闲下来，去电影院看个电影是不错的选择。我一般喜欢喜剧片、科幻片和动作片。但是这里我还是老老实实套用书里讲的爱情片和动作片的分类好了。</p>
+<p>我们知道的功夫巨星如成龙，李连杰，吴京等，看他们的电影，你会发现其中打斗的场景特别多，生死看淡不服就干，但是一些爱情片如前任1，前任2，前任3(活了这么大也没个前任，甚是可悲)，这类电影吻戏会比较多。我们把吻戏的镜头和动作戏的镜头作为指标，衡量一部电影到底是爱情片还是动作片，爱情动作片不在考虑范围内，这个太为难我们的算法了(这个问题感兴趣的我们可以私下交流🙄🙄🙄)。</p>
+<h4 id="准备数据"><a href="#准备数据" class="headerlink" title="准备数据"></a>准备数据</h4><p>为了简化过程，这里我们只假定四条数据，两条爱情片，两条动作片。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">函数说明:创建数据集</span></span><br><span class="line"><span class="string">    @returns:</span></span><br><span class="line"><span class="string">        group: 数据集</span></span><br><span class="line"><span class="string">        labels: 分类标签</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">createDataSet</span><span class="params">()</span>:</span></span><br><span class="line"></span><br><span class="line">  <span class="comment">#四组二维特征</span></span><br><span class="line">  features = np.array([[<span class="number">1</span>,<span class="number">101</span>],[<span class="number">5</span>,<span class="number">89</span>],[<span class="number">108</span>,<span class="number">5</span>],[<span class="number">115</span>,<span class="number">8</span>]])</span><br><span class="line">  <span class="comment">#四组特征的标签</span></span><br><span class="line">  labels = [<span class="string">'爱情片'</span>,<span class="string">'爱情片'</span>,<span class="string">'动作片'</span>,<span class="string">'动作片'</span>]</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> features, labels</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">	features, labels = createDataSet()</span><br><span class="line">	print(<span class="string">"数据集："</span>)</span><br><span class="line">	print(features)</span><br><span class="line">	print(<span class="string">"标签："</span>)</span><br><span class="line">	print(labels)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">	main()</span><br></pre></td></tr></table></figure>
+
+<p>下面运行结果，我使用的是sublime，配置了python开发环境，直接在sublime下执行的。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g5p19vyjl0j30k207c0t5.jpg" alt="image-20190805193729450"></p>
+<p>为了更直观的显示爱情片和动作片在空间上差异，我们使用matplotlib这个库，将上面的坐标画出来：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">函数说明: 绘制坐标示意图</span></span><br><span class="line"><span class="string">	@params: </span></span><br><span class="line"><span class="string">		features: 特征值集合</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">drawPicture</span><span class="params">(features)</span>:</span></span><br><span class="line">  </span><br><span class="line">  <span class="comment"># 导入matplotlib下的绘图工具</span></span><br><span class="line">	<span class="keyword">import</span> matplotlib.pyplot <span class="keyword">as</span> plt</span><br><span class="line">	</span><br><span class="line">  <span class="comment"># 数据集中的第一维是x轴，数据集中的第二维是y轴</span></span><br><span class="line">	x, y = features[:, <span class="number">0</span>], features[:, <span class="number">1</span>]</span><br><span class="line">	<span class="comment"># 初始化</span></span><br><span class="line">	fig, ax = plt.subplots()</span><br><span class="line">	<span class="comment"># 设置数据: 爱情片用红色表示，动作片用蓝色表示</span></span><br><span class="line">	ax.scatter(x[:<span class="number">2</span>], y[:<span class="number">2</span>], color=<span class="string">'red'</span>)</span><br><span class="line">  ax.scatter(x[<span class="number">2</span>:], y[<span class="number">2</span>:], color=<span class="string">'blue'</span>)</span><br><span class="line"></span><br><span class="line">	plt.show()</span><br></pre></td></tr></table></figure>
+
+<p>如下图所示:</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79ly1g5p1xob788j30us0mqjs0.jpg" alt="image-20190805200021091"></p>
+<p>即使不使用算法，从感官上看，未知点靠进红色点时，应该被标记为红色，即爱情片；未知点靠进蓝色点时，应该被标记为蓝色，即动作片。</p>
+<h4 id="k-近邻算法实现"><a href="#k-近邻算法实现" class="headerlink" title="k-近邻算法实现"></a>k-近邻算法实现</h4><p>带有标签的数据集我们已经准备好了，接下来是实现算法。对新给入的数据将其依次与已知数据距离计算，得到新数据距离已有数据的距离。然后从这些距离中找出最小的k个，统计这k个数的分类情况，最多的类作为新数据的分类。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">函数说明: kNN算法，分类器</span></span><br><span class="line"><span class="string"> </span></span><br><span class="line"><span class="string">	@params:</span></span><br><span class="line"><span class="string">    	inX: 用于分类的数据(测试集)</span></span><br><span class="line"><span class="string">    	dataSet: 用于训练的数据(训练集)</span></span><br><span class="line"><span class="string">    	labes: 分类标签</span></span><br><span class="line"><span class="string">    	k: kNN算法参数,选择距离最小的k个点</span></span><br><span class="line"><span class="string">	</span></span><br><span class="line"><span class="string">	@returns:</span></span><br><span class="line"><span class="string">    	sortedClassCount[0][0]: 分类结果</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">classify0</span><span class="params">(inX, dataSet, labels, k)</span>:</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 训练集有多少条数据</span></span><br><span class="line">    dataSetSize = dataSet.shape[<span class="number">0</span>]</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 将inX在横向复制1次，纵向复制dataSetSize次</span></span><br><span class="line">    <span class="comment"># 这样就得到了一个和训练集形状相同的测试数据集</span></span><br><span class="line">    dataMat = np.tile(inX, (dataSetSize, <span class="number">1</span>))</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 矩阵之间做减法，求特征值之间的差值</span></span><br><span class="line">    diffMat = dataMat - dataSet</span><br><span class="line">    <span class="comment"># 差值的平方</span></span><br><span class="line">    sqDiffMat = diffMat**<span class="number">2</span></span><br><span class="line">    <span class="comment"># 累加得到距离的平方</span></span><br><span class="line">    sqDistances = sqDiffMat.sum(axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># 开方，计算出距离</span></span><br><span class="line">    distances = sqDistances**<span class="number">0.5</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 返回distances中元素从小到大排序后的索引值</span></span><br><span class="line">    sortedDistIndices = distances.argsort()</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 定一个记录类别次数的字典</span></span><br><span class="line">    classCount = &#123;&#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(k):</span><br><span class="line">        </span><br><span class="line">        <span class="comment"># 取出前k个元素的类别</span></span><br><span class="line">        voteIlabel = labels[sortedDistIndices[i]]</span><br><span class="line">        <span class="comment"># dict.get(key,default=None),字典的get()方法,返回指定键的值,如果值不在字典中返回默认值。</span></span><br><span class="line">        <span class="comment"># 计算类别次数</span></span><br><span class="line">        classCount[voteIlabel] = classCount.get(voteIlabel,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment"># python3中用items()替换python2中的iteritems()</span></span><br><span class="line">    <span class="comment"># key=operator.itemgetter(1)根据字典的值进行排序</span></span><br><span class="line">    <span class="comment"># key=operator.itemgetter(0)根据字典的键进行排序</span></span><br><span class="line">    <span class="comment"># reverse降序排序字典</span></span><br><span class="line">    sortedClassCount = sorted(classCount.items(),key=operator.itemgetter(<span class="number">1</span>),reverse=<span class="literal">True</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment"># 返回次数最多的类别,即所要分类的类别</span></span><br><span class="line">    <span class="keyword">return</span> sortedClassCount[<span class="number">0</span>][<span class="number">0</span>]</span><br></pre></td></tr></table></figure>
+
+<p>下面我们就测试这个算法，看看它能不能像我们想的那样，给未知的电影进行分类。</p>
+<p>我们使用<code>inX = [10, 107]</code>作为测试数据，这不电影里面吻戏居多，应该是一部爱情片。</p>
+<p><img src="http://ww1.sinaimg.cn/large/006tNc79ly1g5p2j8yq6rj311k0oqtce.jpg" alt="image-20190805202105125"></p>
+<p>从上面的执行结果我们可以看出，分类器很好的完成了自己的工作。对于吻戏居多的电影分为爱情片。</p>
+<p>我们可以多测试数据：</p>
+<blockquote>
+<p>测试数据:  [107, 10] 的分类结果是:  动作片</p>
+<p>测试数据:  [50, 50] 的分类结果是:  爱情片</p>
+<p>测试数据:  [100, 100] 的分类结果是:  动作片</p>
+</blockquote>
+<p>从上面的例子我们可以看出，这个分类器是无法分出爱情动作片的。</p>
+<h3 id="k-近邻算法实战之约会网站配对效果判定"><a href="#k-近邻算法实战之约会网站配对效果判定" class="headerlink" title="k-近邻算法实战之约会网站配对效果判定"></a>k-近邻算法实战之约会网站配对效果判定</h3><p>待更新</p>
+<h3 id="附《机器学习实战》电子版"><a href="#附《机器学习实战》电子版" class="headerlink" title="附《机器学习实战》电子版"></a>附《机器学习实战》电子版</h3><p><a href="https://item.jd.com/11242112.html" target="_blank" rel="noopener">《机器学习实战》</a>链接:<a href="https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg" target="_blank" rel="noopener">https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg</a>  密码:s6h8</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/k-近邻算法/" rel="tag"># k-近邻算法</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/05/leetcode0169-求众数/" rel="next" title="leetcode0169-求众数">
+                <i class="fa fa-chevron-left"></i> leetcode0169-求众数
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/06/leetcode0011-盛水最多的容器/" rel="prev" title="leetcode0011-盛水最多的容器">
+                leetcode0011-盛水最多的容器 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/avatar.jpg" alt="liu246437">
+            
+              <p class="site-author-name" itemprop="name">liu246437</p>
+              <p class="site-description motion-element" itemprop="description">90后老肥宅，毕业后一直从事Java开发，目前在学习机器学习相关内容，勤于学习，乐于分享。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#K-近邻算法简述"><span class="nav-number">1.</span> <span class="nav-text">K-近邻算法简述</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#工作原理："><span class="nav-number">1.0.1.</span> <span class="nav-text">工作原理：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#距离的测量"><span class="nav-number">1.0.2.</span> <span class="nav-text">距离的测量</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#k-近邻算法的一般流程"><span class="nav-number">1.0.3.</span> <span class="nav-text">k-近邻算法的一般流程</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#实战演练"><span class="nav-number">2.</span> <span class="nav-text">实战演练</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#电影分类"><span class="nav-number">2.1.</span> <span class="nav-text">电影分类</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备数据"><span class="nav-number">2.1.1.</span> <span class="nav-text">准备数据</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#k-近邻算法实现"><span class="nav-number">2.1.2.</span> <span class="nav-text">k-近邻算法实现</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#k-近邻算法实战之约会网站配对效果判定"><span class="nav-number">2.2.</span> <span class="nav-text">k-近邻算法实战之约会网站配对效果判定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附《机器学习实战》电子版"><span class="nav-number">2.3.</span> <span class="nav-text">附《机器学习实战》电子版</span></a></li></ol></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liu246437</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="机器学习基础,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="​        重新学习《机器学习实战》这本书，作为机器学习入门来说，这本书真的很不错，理论和实际相结合，可以快速上手代码，体验算法的实现过程。目标是把这本书的每一章概要都摘录出来，算是自己的学习笔记吧。文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。 简述机器学习能让我们自数据集中受到启发，换句话说，我们会利用计算机来彰显数据背后的真实含">
+<meta name="keywords" content="机器学习基础">
+<meta property="og:type" content="article">
+<meta property="og:title" content="机器学习实战1——机器学习基础">
+<meta property="og:url" content="http://liu246437.github.io/2019/08/03/机器学习实战1——机器学习基础/index.html">
+<meta property="og:site_name" content="渣渣技术站">
+<meta property="og:description" content="​        重新学习《机器学习实战》这本书，作为机器学习入门来说，这本书真的很不错，理论和实际相结合，可以快速上手代码，体验算法的实现过程。目标是把这本书的每一章概要都摘录出来，算是自己的学习笔记吧。文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。 简述机器学习能让我们自数据集中受到启发，换句话说，我们会利用计算机来彰显数据背后的真实含">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g5mrbypuddj30yh0bbtb5.jpg">
+<meta property="og:updated_time" content="2019-08-06T09:11:01.803Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="机器学习实战1——机器学习基础">
+<meta name="twitter:description" content="​        重新学习《机器学习实战》这本书，作为机器学习入门来说，这本书真的很不错，理论和实际相结合，可以快速上手代码，体验算法的实现过程。目标是把这本书的每一章概要都摘录出来，算是自己的学习笔记吧。文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。 简述机器学习能让我们自数据集中受到启发，换句话说，我们会利用计算机来彰显数据背后的真实含">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/006tNc79ly1g5mrbypuddj30yh0bbtb5.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://liu246437.github.io/2019/08/03/机器学习实战1——机器学习基础/">
+
+
+
+
+
+  <title>机器学习实战1——机器学习基础 | 渣渣技术站</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">渣渣技术站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个技术渣的呐喊</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://liu246437.github.io/2019/08/03/机器学习实战1——机器学习基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="liu246437">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/img/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="渣渣技术站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">机器学习实战1——机器学习基础</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-03T22:40:10+08:00">
+                2019-08-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/机器学习/" itemprop="url" rel="index">
+                    <span itemprop="name">机器学习</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>​        重新学习《机器学习实战》这本书，作为机器学习入门来说，这本书真的很不错，理论和实际相结合，可以快速上手代码，体验算法的实现过程。目标是把这本书的每一章概要都摘录出来，算是自己的学习笔记吧。文末有本书的PDF电子版，仅供学习交流使用，毕竟做笔记写代码还是电子书方便一点。提倡大家去购买正版图书。</p>
+<h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><p>机器学习能让我们<strong>自数据集中受到启发</strong>，换句话说，我们会<strong>利用计算机来彰显数据背后的真实含义</strong>，这才是机器学习的正式含义。</p>
+<p>应用场景举例：</p>
+<ul>
+<li>改善商业决策</li>
+<li>提高生成率</li>
+<li>检测疾病</li>
+<li>预测天气</li>
+<li>人脸识别</li>
+<li>垃圾邮件分类</li>
+<li>个性化商品推荐</li>
+</ul>
+<h2 id="何谓机器学习"><a href="#何谓机器学习" class="headerlink" title="何谓机器学习"></a>何谓机器学习</h2><p><strong><em>机器学习就是把无序的数据转换成有用的信息。</em></strong></p>
+<p>机器学习对于任何需要解释并操作数据的领域都有所裨益。</p>
+<p>机器学习用到了统计学的知识。</p>
+<p>当我们不能建立一种精确模型时，我们可以参照现实世界中存在的这种实例，运用统计学工具去解决这类问题。</p>
+<h3 id="传感器和海量数据"><a href="#传感器和海量数据" class="headerlink" title="传感器和海量数据"></a>传感器和海量数据</h3><p>非人为数据：传感器采集的数据</p>
+<p>移动计算和传感器产生的海量数据意味着未来我们将面临着越来越多的数据，如何从海量数据中抽取到有价值的信息将是一个非常重要的可以。</p>
+<h3 id="机器学习非常重要"><a href="#机器学习非常重要" class="headerlink" title="机器学习非常重要"></a>机器学习非常重要</h3><p>针对具体任务搞懂所有相关数据的意义所在，这正成为基本的技能要求。</p>
+<p>机器学习有助于我们穿越数据的迷雾，从中抽取到有用的信息。</p>
+<h2 id="关键术语"><a href="#关键术语" class="headerlink" title="关键术语"></a>关键术语</h2><p><strong>特征：</strong>也称为属性，特征值可以是数值型，二值型（是或不是一类只有两个值，一般取0，1），枚举型等。特征或者属性通常是训练样本集的列，它们是独立测量得到的结果。多个特征联系在一起共同组成一个训练样本。</p>
+<p><strong>目标变量：</strong>机器学习算法的预测结果，在分类算法中目标变量的类型通常是标称型的，在回归算法中通常是连续型的。</p>
+<p><strong>训练集：</strong>已经处理过的数据，根据任务的不同，数据的处理方式也不尽相同。训练集必须有明确的目标变量的值，以便机器学习算法可以发现特征和目标变量之间的关系。</p>
+<p><strong>训练样本：</strong>训练集中的单条记录</p>
+<p><strong>训练数据：</strong>通过训练数据作为算法输入训练模型</p>
+<p><strong>测试数据：</strong>训练结束后输入测试数据，验证训练结果。输入测试数据时并不输入测试样本的目标变量，而是有程序自身去判定。</p>
+<p><strong>知识表示：</strong>某些算法可以产生很容易理解的知识表示，某些算法的知识表示也许只有计算机可以理解。知识表示可以采用规则集的形式，也可以采用概率分布的形式，甚至可以是训练样本集中的一个实例。</p>
+<p><strong>监督学习：</strong>必须知道分类结果或者预测结果是什么，即目标标量的分类信息。</p>
+<p><strong>无监督学习：</strong>数据没有类别信息，也不会给定目标值。</p>
+<h2 id="机器学习的主要任务"><a href="#机器学习的主要任务" class="headerlink" title="机器学习的主要任务"></a>机器学习的主要任务</h2><p>机器学习的主要任务是分类和回归。</p>
+<p>回归主要用于预测数值型数据。</p>
+<p>分类和回归都属于监督学习。</p>
+<p>无监督学习的主要任务是聚类和密度估计。无监督学习还可以减少数据特征的维度，以便我们可以使用二维或三维图形更加直观的展示数据。</p>
+<p><strong>聚类：</strong>将数据集合分成由类似的对象组成的多个类的过程被称为聚类</p>
+<p><strong>密度估计：</strong>将寻找描述数据统计值的过程称之为密度估计。</p>
+<p><img src="http://ww4.sinaimg.cn/large/006tNc79ly1g5mrbypuddj30yh0bbtb5.jpg" alt="image-20190803202219625"></p>
+<h2 id="如何选择合适的算法"><a href="#如何选择合适的算法" class="headerlink" title="如何选择合适的算法"></a>如何选择合适的算法</h2><p><strong>选择哪种算法取决于以下两个问题：</strong></p>
+<ul>
+<li>使用机器学习算法的目的，想要算法完成何种任务。<ul>
+<li><strong>预测目标变量的值选择监督学习算法，否则选择无监督学习算法。</strong><ul>
+<li>在监督学习算法中，如果目标变量是离散型，可以选择分类算法，如果目标值是连续型的数值，需要选择回归算法。</li>
+<li>再无监督学习中，分析是否需要将数据划分为离散的组，如果是，则选择聚类算法。如果还需要估计数据与每个分组的相似程度，则需要使用密度估计算法。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>需要分析或者收集的数据是什么<ul>
+<li>了解数据的特性<ul>
+<li>特征值是离散型变量还是连续型变量</li>
+<li>特征值中是否存在缺失的值，何种原因造成缺失</li>
+<li>数据中是否存在异常值</li>
+<li>某个特征发生的频率如何</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="开发及其学习应用程序的步骤"><a href="#开发及其学习应用程序的步骤" class="headerlink" title="开发及其学习应用程序的步骤"></a>开发及其学习应用程序的步骤</h2><ol>
+<li><p>收集数据</p>
+<ul>
+<li>网络爬虫</li>
+<li>设备反馈，各类传感器</li>
+<li>公开的数据源</li>
+</ul>
+</li>
+<li><p>准备输入数据</p>
+<p>得到数据之后，还必须保证数据格式符合要求。需要为机器学习算法准备特定的数据格式，如某些特征值使用特定的格式，一些算法要求目标变量和特征值是字符串类型，而另一些算法可能要求是整数类型。</p>
+</li>
+<li><p>分析输入数据</p>
+<p>此步骤主要是人工分析以前得到的数据。这一步的主要作用是确保数据集中没有垃圾数据。</p>
+</li>
+<li><p>训练算法</p>
+<p>第4步和第5步是机器学习算法的核心。我们将前两步得到的格式化数据输入到算法，从中提取知识或信息。这里得到的知识需要存储为计算机可以处理的格式。</p>
+<p>在无监督学习中，由于不存在目标变量之，故而也不需要训练算法，所有与算法相关的内容都集中在第5步。</p>
+</li>
+<li><p>测试算法</p>
+<p>这一步将实际使用步骤4得到的知识信息。为了评估算法，必须测试算法工作的效果。对于监督学习，必须已知用于评估算法的目标变量值；对于无监督学习，也必须使用其他评测手段来检验算法的成功率。</p>
+</li>
+<li><p>使用算法</p>
+<p>将机器学习的算法转换为应用程序，执行实际任务。</p>
+</li>
+</ol>
+<h2 id="Python语言的优势"><a href="#Python语言的优势" class="headerlink" title="Python语言的优势"></a>Python语言的优势</h2><p>基于以下三个原因：</p>
+<ul>
+<li>python语法清晰</li>
+<li>易于操作纯文本文件</li>
+<li>使用广泛，存在大量的开发文档</li>
+</ul>
+<h3 id="可执行伪代码"><a href="#可执行伪代码" class="headerlink" title="可执行伪代码"></a>可执行伪代码</h3><h3 id="Python比较流行"><a href="#Python比较流行" class="headerlink" title="Python比较流行"></a>Python比较流行</h3><ul>
+<li>SciPy</li>
+<li>NumPy</li>
+<li>Matplotlib</li>
+</ul>
+<h3 id="Python语言的特色"><a href="#Python语言的特色" class="headerlink" title="Python语言的特色"></a>Python语言的特色</h3><h3 id="Python语言的缺点"><a href="#Python语言的缺点" class="headerlink" title="Python语言的缺点"></a>Python语言的缺点</h3><p>性能不足，执行效率没有C或者Java快。 </p>
+<h3 id="附《机器学习实战》电子版"><a href="#附《机器学习实战》电子版" class="headerlink" title="附《机器学习实战》电子版"></a>附《机器学习实战》电子版</h3><p><a href="https://item.jd.com/11242112.html" target="_blank" rel="noopener">《机器学习实战》</a>链接:<a href="https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg" target="_blank" rel="noopener">https://pan.baidu.com/s/1opjVllNBf1WMVcNWJ5NzYg</a>  密码:s6h8</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/机器学习基础/" rel="tag"># 机器学习基础</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/03/leetcode0141-环形链表/" rel="next" title="leetcode0141-环形链表">
+                <i class="fa fa-chevron-left"></i> leetcode0141-环形链表
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/08/04/leetcode0142-环形链表II/" rel="prev" title="leetcode0142-环形链表II">
+                leetcode0142-环形链表II <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/img/avatar.jpg" alt="liu246437">
+            
+              <p class="site-author-name" itemprop="name">liu246437</p>
+              <p class="site-description motion-element" itemprop="description">90后老肥宅，毕业后一直从事Java开发，目前在学习机器学习相关内容，勤于学习，乐于分享。</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">30</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">17</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#何谓机器学习"><span class="nav-number">2.</span> <span class="nav-text">何谓机器学习</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#传感器和海量数据"><span class="nav-number">2.1.</span> <span class="nav-text">传感器和海量数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#机器学习非常重要"><span class="nav-number">2.2.</span> <span class="nav-text">机器学习非常重要</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关键术语"><span class="nav-number">3.</span> <span class="nav-text">关键术语</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#机器学习的主要任务"><span class="nav-number">4.</span> <span class="nav-text">机器学习的主要任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何选择合适的算法"><span class="nav-number">5.</span> <span class="nav-text">如何选择合适的算法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#开发及其学习应用程序的步骤"><span class="nav-number">6.</span> <span class="nav-text">开发及其学习应用程序的步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Python语言的优势"><span class="nav-number">7.</span> <span class="nav-text">Python语言的优势</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#可执行伪代码"><span class="nav-number">7.1.</span> <span class="nav-text">可执行伪代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python比较流行"><span class="nav-number">7.2.</span> <span class="nav-text">Python比较流行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python语言的特色"><span class="nav-number">7.3.</span> <span class="nav-text">Python语言的特色</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Python语言的缺点"><span class="nav-number">7.4.</span> <span class="nav-text">Python语言的缺点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#附《机器学习实战》电子版"><span class="nav-number">7.5.</span> <span class="nav-text">附《机器学习实战》电子版</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">liu246437</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Pisces</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+
+  
+
+  
+
+</body>
+</html>
