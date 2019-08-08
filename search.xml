@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[leetcode0234-回文链表]]></title>
+    <url>%2F2019%2F08%2F08%2Fleetcode0234-%E5%9B%9E%E6%96%87%E9%93%BE%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[问题描述请判断一个链表是否为回文链表。 示例 1: 12输入: 1-&gt;2输出: false 示例 2: 12输入: 1-&gt;2-&gt;2-&gt;1输出: true 进阶：你能否用 O(n) 时间复杂度和 O(1) 空间复杂度解决此题？ 解题思路如果我们不看进阶要求，不考虑空间复杂度，有一个非常简单的方式，遍历构造数组，首尾遍历，判断是否相等，就可以很顺利的解决这个题。 但是题目要求是O(1)的空间复杂度，也就是只能使用常数个额外空间，我很多时候看到O(1)总感觉只让使用一个额外变量。链表与数组相比，在于它不能通过索引来遍历数组，只能通过指针寻址。 让我们来看一下回文链表的结构，它首尾对应的位置的数值相等。也就是说，第一个和倒数第一个相等，第二个和倒数第二个相等，以此类推。正向的寻址是一个简单的过程，因为现有的链表结构我们通过next就可以获取下一个节点的地址，读取对应的数值。所以问题的关键到了如何反向寻址。 解决反向寻址当然是翻转链表了，但是我们又不能全部翻转，全部翻转正向寻址的过程就被破坏了。所以我们要做的是翻转一般链表，就是将后半段链表翻转。 思路已经有了，下面就是实现的问题了。首先要解决的是找到链表的中间节点。这个我们可以通过快慢指针来解决，快指针一次走两步，慢指针一次走一步，当快指针走完的时候，慢指针正好停留在链表的中间。在翻转链表的时候一定要注意断开中间节点的next指针。后半部分翻转之后，我们就可以首尾寻址，依次判断数值是否相等，全部相等，则是回文链表，否则不是。 判断回文链表： 快慢指针找中间点 翻转后一半链表 前后一次对比数值是否相等 代码实现123456789101112131415161718192021222324252627282930313233# Definition for singly-linked list.# class ListNode:# def __init__(self, x):# self.val = x# self.next = Noneclass Solution: def isPalindrome(self, head: ListNode) -&gt; bool: # 空链或只有一个节点 if head is None or head.next is None: return True # 快慢指针找中点 faster, slower = head, head while faster is not None and faster.next is not None: slower = slower.next faster = faster.next.next # 反转中点之后的节点，断开中间节点，以便循环终止 pre, p = slower, slower.next q, pre.next = p, None while p: q = q.next p.next = pre pre = p p = q # 依次判断首尾是否相等 while pre and head: if pre.val == head.val: pre, head = pre.next, head.next else: return False return True]]></content>
+      <categories>
+        <category>算法</category>
+      </categories>
+      <tags>
+        <tag>leetcode</tag>
+        <tag>python</tag>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[leetcode0167-两数之和II-输入有序数组]]></title>
     <url>%2F2019%2F08%2F07%2Fleetcode0167-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8CII-%E8%BE%93%E5%85%A5%E6%9C%89%E5%BA%8F%E6%95%B0%E7%BB%84%2F</url>
     <content type="text"><![CDATA[问题描述给定一个已按照升序排列的有序数组，找到两个数使得它们相加之和等于目标数。 函数应该返回这两个下标值 index1 和 index2，其中 index1 必须小于 index2。 说明: 返回的下标值（index1 和 index2）不是从零开始的。你可以假设每个输入只对应唯一的答案，而且你不可以重复使用相同的元素。示例： 123输入: numbers = [2, 7, 11, 15], target = 9输出: [1,2]解释: 2 与 7 之和等于目标数 9 。因此 index1 = 1, index2 = 2 。 解题思路这个题也是个简单题，关键是思路。 与leetcode第一题：两数之和相比，这个题输入是有序数组，如何使用这一性质是优化的关键。 方法一：普通遍历因为是有序数组，所以我们可以双向遍历 取首尾两数相加 如果和目标值相等返回对应索引 如果大于目标值，尾索引减1 如果小于木编制，头索引加1 方法二：二分查找从首位置开始，依次进行二分查找 取nums[index]作为第一个加数，target-nums[index]为被加数 二分查找的范围为[index+1, nums.length-1] 若存在等于被加数的数，返回指定索引 若不存在index+1，继续下一轮遍历 代码实现代码一：普通遍历123456789class Solution: def twoSum(self, numbers: List[int], target: int) -&gt; List[int]: left, right, tmp = 0, len(numbers)-1, 0 for num in numbers: tmp = numbers[left] + numbers[right] if tmp == target: return [left+1, right + 1] if tmp &gt; target: right -= 1 if tmp &lt; target: left += 1 代码二：二分查找123456789101112131415161718192021class Solution: def twoSum(self, numbers: List[int], target: int) -&gt; List[int]: for left in range(len(numbers)): right = self.binarySearch(target-numbers[left], left + 1, numbers) if right != -1: return [left+1, right+1] def binarySearch(self, target: int, index: int, numbers: List[int]) -&gt; int: start, end = index, len(numbers)-1 while start &lt;= end: mid = start + (end - start) // 2; if numbers[mid] &lt; target: start = mid + 1 elif numbers[mid] &gt; target: end = mid - 1 else: return mid return -1]]></content>
